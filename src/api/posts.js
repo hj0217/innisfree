@@ -1,7 +1,7 @@
 import { posts } from '.';
 
-export function getPosts(params) {
-	return posts.get('/', { params });
+export function getPosts() {
+	return posts.get('/');
 }
 
 export function getPostById(id) {

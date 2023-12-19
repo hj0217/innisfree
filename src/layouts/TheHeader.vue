@@ -1,8 +1,10 @@
 <template>
-	<header>
-		<nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+<header>
+	<div class="container">
+		<nav class="navbar navbar-expand-sm">
 			<div class="container-fluid">
-				<RouterLink class="navbar-brand" to="/">GYM CODING</RouterLink>
+				<RouterLink class="navbar-brand" to="/">Innisfree</RouterLink>
+
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -14,47 +16,55 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto">
+				<PostFilter></PostFilter>
+				
+					<div class="d-flex flex-row-reverse">
+							<ul class="navbar-nav me-auto">
 						<li class="nav-item">
-							<RouterLink class="nav-link" active-class="active" to="/">
-								Home
+							<RouterLink class="nav-link" active-class="active" to="/login">
+								로그인
 							</RouterLink>
 						</li>
 						<li class="nav-item">
-							<RouterLink class="nav-link" active-class="active" to="/about">
-								About
+							<RouterLink class="nav-link" active-class="active" to="/join">
+								회원가입
 							</RouterLink>
 						</li>
 						<li class="nav-item">
-							<RouterLink class="nav-link" active-class="active" to="/posts">
-								게시글
-							</RouterLink>
-						</li>
-						<li class="nav-item">
-							<RouterLink class="nav-link" active-class="active" to="/nested">
-								Nested
-							</RouterLink>
-						</li>
-						<li class="nav-item">
-							<RouterLink class="nav-link" active-class="active" to="/my">
-								MyPage
+							<RouterLink class="nav-link" active-class="active" to="/cart">
+								장바구니
 							</RouterLink>
 						</li>
 					</ul>
-					<div class="d-flex">
-						<button class="btn btn-outline-light" type="button" @click="goPage">
-							글쓰기
-						</button>
 					</div>
-				</div>
 			</div>
 		</nav>
+	
+		<div class="mt-3">
+			<nav class="nav nav-pills nav-fill">
+				<RouterLink class="nav-link" active-class="active" to="/menu/special">
+				특가
+				</RouterLink>
+				<RouterLink class="nav-link" active-class="active" to="/menu/event">
+				이벤트
+				</RouterLink>
+				<RouterLink class="nav-link" active-class="active" to="/menu/showcase">
+				베스트
+				</RouterLink>
+			
+				<RouterLink class="nav-link" active-class="active" to="/menu/live">
+				라이브
+				</RouterLink>
+
+			</nav> 
+		</div>
+	</div>
 	</header>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router';
+import PostFilter from '@/components/posts/PostFilter.vue';
 
 const router = useRouter();
 const goPage = () => {
@@ -64,4 +74,5 @@ const goPage = () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+</style>

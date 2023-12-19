@@ -1,27 +1,14 @@
 <template>
 	<form @submit.prevent>
-		<div class="row g-3">
-			<div class="col">
+		
 				<input
 					:value="title"
 					@input="changeTitle"
 					type="text"
 					class="form-control"
-					placeholder="제목으로 검색해주세요."
+					placeholder="포인트+쿠폰이 쏟아지는 룰렛 돌리기!"
+					id="inputWidth"
 				/>
-			</div>
-			<div class="col-3">
-				<select
-					:value="limit"
-					@input="$emit('update:limit', $event.target.value)"
-					class="form-select"
-				>
-					<option value="6">6개씩</option>
-					<option value="12">12개씩</option>
-					<option value="18">18개씩</option>
-				</select>
-			</div>
-		</div>
 	</form>
 </template>
 
@@ -47,4 +34,9 @@ const changeTitle = e => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+#inputWidth{
+	width: 350px;	
+}
+
+</style>

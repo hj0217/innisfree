@@ -7,7 +7,7 @@
 		<h2>게시글 수정</h2>
 		<hr class="my-4" />
 		<AppError v-if="editError" :message="editError.message" />
-		<PostForm
+		<!-- <PostForm
 			v-model:title="form.title"
 			v-model:content="form.content"
 			@submit.prevent="edit"
@@ -32,7 +32,7 @@
 					<template v-else> 수정 </template>
 				</button>
 			</template>
-		</PostForm>
+		</PostForm> -->
 	</div>
 </template>
 
@@ -40,7 +40,7 @@
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getPostById, updatePost } from '@/api/posts';
-import PostForm from '@/components/posts/PostForm.vue';
+//import PostForm from '@/components/posts/PostForm.vue';
 import { useAlert } from '@/composables/alert.js';
 import { useAxios } from '@/hooks/useAxios';
 

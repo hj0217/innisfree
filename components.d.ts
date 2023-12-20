@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     AppError: typeof import('./src/components/app/AppError.vue')['default']
     AppFullImg: typeof import('./src/components/app/AppFullImg.vue')['default']
     AppGrid: typeof import('./src/components/app/AppGrid.vue')['default']
+    AppItem: typeof import('./src/components/app/AppItem.vue')['default']
     AppLoading: typeof import('./src/components/app/AppLoading.vue')['default']
     AppMenu: typeof import('./src/components/app/AppMenu.vue')['default']
     AppModal: typeof import('./src/components/app/AppModal.vue')['default']
